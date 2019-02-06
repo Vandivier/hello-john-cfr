@@ -1,0 +1,29 @@
+{
+  "name": "hello-john-cfr",
+  "version": "0.0.1",
+  "description": "Cloudformation + React Serverless Starter",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vandivier/hello-john-cfr.git"
+  },
+  "keywords": [
+    "react",
+    "cloudformation",
+    "aws",
+    "lambda",
+    "serverless",
+    "starter",
+    "javascript",
+    "node"
+  ],
+  "author": "John Vandivier",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vandivier/hello-john-cfr/issues"
+  },
+  "homepage": "https://github.com/Vandivier/hello-john-cfr#readme"
+}
