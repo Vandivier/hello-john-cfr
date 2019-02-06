@@ -10,3 +10,9 @@ Cloudformation + React = Serverless Starter 💕🔥
 2. targeting create-react-app as static site in S3
     1. ref: https://facebook.github.io/create-react-app/docs/deployment
     2. ref: https://facebook.github.io/create-react-app/docs/pre-rendering-into-static-html-files
+3. basic flow
+    1. land on home page, you are a guest.
+    2. say hello guest.
+    3. optionally, log in (as john, only seeded user)
+    4. then, say hello john by fetching user info.
+    5. john has option to create new users who can then log in and see hello to them.
