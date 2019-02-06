@@ -34,3 +34,5 @@ Cloudformation + React = Serverless Starter 💕🔥
         1. ref: https://developer.okta.com/blog/2018/07/31/use-aws-cloudformation-to-automate-static-site-deployment-with-s3
         2. ref: https://serverless-stack.com/chapters/deploy-to-s3.html
         3. ref: https://medium.com/@omgwtfmarc/deploying-create-react-app-to-s3-or-cloudfront-48dae4ce0af
+7. It's currently a goal to remain create-react-app compliant without ejection
+    1. this is why we have, eg, /ui/src/services instead of /ui/services which i would normally do
