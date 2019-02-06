@@ -12,18 +12,24 @@ class App extends Component {
     super(props);
 
     this.state = {
-      sUsername: 'Guest'
+      sUsername: 'Sessionless Guest'
     };
 
     this.fGetUserInfoBySession = this.fGetUserInfoBySession.bind(this);
+
+    this.fGetUserInfoBySession()
   }
 
   // Response from BE Lambda get-user-info-by-session
   fGetUserInfoBySession = async () => {
       // TODO: Try omitting second arg instead of posting empty object
-      const oUserInfoResponse = await this.mBaseService.fpPost('/reports/split-panel-by-column', {});
+      // TODO: maybe REACT_APP_AWSAG_HOST be preppended within mBaseService.fpPost
+      console.log(process.env.REACT_APP_AWSAG_HOST + '/dev/user-info-by-session')
+      const oUserInfoResponse = await this.mBaseService.fpPost(process.env.REACT_APP_AWSAG_HOST + '/dev/user-info-by-session', {});
 
-      if (!oUserInfoResponse.oError) {
+      if (oUserInfoResponse.oError || !oUserInfoResponse.sUsername) {
+        // TODO: handle
+      } else {
         this.setState({
           sUsername: oUserInfoResponse.sUsername
         });

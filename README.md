@@ -7,6 +7,10 @@ Cloudformation + React = Serverless Starter 💕🔥
     1. `npm install -g serverless`
     2. Made IAM user with name serverless-test, per [video instructions](https://www.youtube.com/watch?v=KngM5bfpttA).
     3. convention: keep credentials.csv in root folder. It will be gitignored.
+    4. convention: Title case i/o lambda function naming. No hungarian, no dashes. eg `UserInfoBySession`
+        1. dashes are bad bc verbose enough to create name conflicts. serverless transforms `user-info-by-session` to `ApiGatewayResourceGetDashuserDashinfoDashbyDashsession`
+        2. serverless mutates case, defeating hungarian. `fGetUserInfoBySession` to `FGetUserInfoBySessionLambdaPermissionApiGateway`
+        3. Specifying method isn't restful.
 2. targeting create-react-app as static site in S3
     1. ref: https://facebook.github.io/create-react-app/docs/deployment
     2. ref: https://facebook.github.io/create-react-app/docs/pre-rendering-into-static-html-files
@@ -36,3 +40,4 @@ Cloudformation + React = Serverless Starter 💕🔥
         3. ref: https://medium.com/@omgwtfmarc/deploying-create-react-app-to-s3-or-cloudfront-48dae4ce0af
 7. It's currently a goal to remain create-react-app compliant without ejection
     1. this is why we have, eg, /ui/src/services instead of /ui/services which i would normally do
+8. serverless examples ref: https://github.com/serverless/examples
