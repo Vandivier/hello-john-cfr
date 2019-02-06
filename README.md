@@ -25,8 +25,12 @@ Cloudformation + React = Serverless Starter 💕🔥
     3. Client also in Jest.
 6. Automate UI deployment to S3
     1. Looks like `npm serverless` doesn't do this.
-    2. Route forward looks like aws cli:
-        1. ref: https://stackoverflow.com/questions/43083800/automate-deployment-of-static-website-files-to-s3-after-the-build
-        2. ref: https://developer.okta.com/blog/2018/07/31/use-aws-cloudformation-to-automate-static-site-deployment-with-s3
-        3. ref: https://serverless-stack.com/chapters/deploy-to-s3.html
-        4. ref: https://medium.com/@omgwtfmarc/deploying-create-react-app-to-s3-or-cloudfront-48dae4ce0af
+    2. Quick and easy route forward is aws cli from local, but this isn't really CICD
+    3. Less quick and easy, but true CICD, is spelled out below:
+        1. ref: https://stackoverflow.com/a/54546873/3931488
+        2. Notice it's dependent on git host. Github, Bitbucket, GitLab, and more are supported, but implementation is heterogenous
+        3. This repo will use a Github-oriented implementation but this starter can be modded for the other repo hosts.
+    4. Other related articles:
+        1. ref: https://developer.okta.com/blog/2018/07/31/use-aws-cloudformation-to-automate-static-site-deployment-with-s3
+        2. ref: https://serverless-stack.com/chapters/deploy-to-s3.html
+        3. ref: https://medium.com/@omgwtfmarc/deploying-create-react-app-to-s3-or-cloudfront-48dae4ce0af
